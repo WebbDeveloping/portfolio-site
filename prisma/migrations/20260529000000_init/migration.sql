@@ -1,5 +1,10 @@
+-- Portfolio tables live in a dedicated schema so this project can share
+-- a Postgres database with other apps without touching their public tables.
+
+CREATE SCHEMA IF NOT EXISTS "portfolio";
+
 -- CreateTable
-CREATE TABLE "Project" (
+CREATE TABLE "portfolio"."Project" (
     "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -27,7 +32,7 @@ CREATE TABLE "Project" (
 );
 
 -- CreateTable
-CREATE TABLE "Post" (
+CREATE TABLE "portfolio"."Post" (
     "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -43,7 +48,7 @@ CREATE TABLE "Post" (
 );
 
 -- CreateTable
-CREATE TABLE "Video" (
+CREATE TABLE "portfolio"."Video" (
     "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "title" TEXT NOT NULL,
@@ -59,7 +64,7 @@ CREATE TABLE "Video" (
 );
 
 -- CreateTable
-CREATE TABLE "DevProject" (
+CREATE TABLE "portfolio"."DevProject" (
     "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -82,7 +87,7 @@ CREATE TABLE "DevProject" (
 );
 
 -- CreateTable
-CREATE TABLE "Service" (
+CREATE TABLE "portfolio"."Service" (
     "id" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "name" TEXT NOT NULL,
@@ -97,16 +102,16 @@ CREATE TABLE "Service" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Project_slug_key" ON "Project"("slug");
+CREATE UNIQUE INDEX "Project_slug_key" ON "portfolio"."Project"("slug");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Post_slug_key" ON "Post"("slug");
+CREATE UNIQUE INDEX "Post_slug_key" ON "portfolio"."Post"("slug");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Video_slug_key" ON "Video"("slug");
+CREATE UNIQUE INDEX "Video_slug_key" ON "portfolio"."Video"("slug");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "DevProject_slug_key" ON "DevProject"("slug");
+CREATE UNIQUE INDEX "DevProject_slug_key" ON "portfolio"."DevProject"("slug");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Service_slug_key" ON "Service"("slug");
+CREATE UNIQUE INDEX "Service_slug_key" ON "portfolio"."Service"("slug");

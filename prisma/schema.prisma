@@ -5,44 +5,49 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("POSTGRES_URL")
+  schemas  = ["portfolio"]
 }
 
 model Project {
-  id                 String   @id @default(cuid())
-  slug               String   @unique
-  name               String
-  client             String   @default("")
-  clientLogo         String   @default("")
-  servicesRendered   String   @default("") @db.Text
-  featured           Boolean  @default(false)
-  mainImage          String   @default("")
-  largeDesktopImg    String   @default("")
-  standardDesktopImg String   @default("")
-  tabletImg          String   @default("")
-  mobileImg          String   @default("")
-  additionalPhotos   Json     @default("[]")
-  projectOverview    String   @default("") @db.Text
-  projectContribution String  @default("") @db.Text
-  clientFeedback     String   @default("") @db.Text
-  finalThought       String   @default("") @db.Text
-  services           Json     @default("[]")
-  liveLink           String   @default("")
-  platformLogo       String   @default("")
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
+  id                  String   @id @default(cuid())
+  slug                String   @unique
+  name                String
+  client              String   @default("")
+  clientLogo          String   @default("")
+  servicesRendered    String   @default("") @db.Text
+  featured            Boolean  @default(false)
+  mainImage           String   @default("")
+  largeDesktopImg     String   @default("")
+  standardDesktopImg  String   @default("")
+  tabletImg           String   @default("")
+  mobileImg           String   @default("")
+  additionalPhotos    Json     @default("[]")
+  projectOverview     String   @default("") @db.Text
+  projectContribution String   @default("") @db.Text
+  clientFeedback      String   @default("") @db.Text
+  finalThought        String   @default("") @db.Text
+  services            Json     @default("[]")
+  liveLink            String   @default("")
+  platformLogo        String   @default("")
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@schema("portfolio")
 }
 
 model Post {
-  id              String   @id @default(cuid())
-  slug            String   @unique
-  name            String
-  postBody        String   @default("") @db.Text
-  postSummary     String   @default("") @db.Text
-  mainImage       String   @default("")
-  thumbnailImage  String   @default("")
-  featured        Boolean  @default(false)
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  name           String
+  postBody       String   @default("") @db.Text
+  postSummary    String   @default("") @db.Text
+  mainImage      String   @default("")
+  thumbnailImage String   @default("")
+  featured       Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@schema("portfolio")
 }
 
 model Video {
@@ -56,6 +61,8 @@ model Video {
   publishedOn   String   @default("")
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
+
+  @@schema("portfolio")
 }
 
 model DevProject {
@@ -76,6 +83,8 @@ model DevProject {
   features    Json?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  @@schema("portfolio")
 }
 
 model Service {
@@ -88,4 +97,6 @@ model Service {
   projects    Json     @default("[]")
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  @@schema("portfolio")
 }
