@@ -4,10 +4,9 @@ import Reveal from "@/components/motion/Reveal";
 import CtaBand from "@/components/ui/CtaBand";
 import PageShell from "@/components/ui/PageShell";
 import SectionHeader from "@/components/ui/SectionHeader";
-import ServiceAccordion from "@/components/webflow/ServiceAccordion";
+import ServicesPreviewSection from "@/components/webflow/ServicesPreviewSection";
 import SiteFooter from "@/components/webflow/SiteFooter";
 import { WebflowLink } from "@/components/webflow/WebflowLink";
-import { homeServices } from "@/lib/content/home-services";
 import type { DevProject, Post } from "@/lib/cms/types";
 
 type HomePageProps = {
@@ -25,17 +24,20 @@ export default function HomePage({ devProjects, featuredPosts }: HomePageProps) 
               <div className="hero-section-text">
                 <div className="hero-section-heading half-width-hero">
                   <Reveal as="h1" immediate className="large-titlee" delay={0}>
-                    I&apos;m <span className="primary">Joe Webb</span>, a Frontend Web Developer &amp;
-                    <span className="primary"> Designer</span>
-                    .<br />
+                    I&apos;m <span className="primary">Joe Webb</span>, a{" "}
+                    <span className="primary">Frontend Engineer</span> &amp;{" "}
+                    <span className="primary">UI/UX Designer</span>.
+                    <br />
                   </Reveal>
                 </div>
                 <div className="hero-section-paragraph">
                   <Reveal as="p" immediate className="regular" delay={0.1}>
-                    I&apos;m Joe Webb, an experienced{" "}
-                    <span className="primary">Frontend Web Developer and Web Designer</span>. I
-                    specialize in designing and developing websites that not only look great but also
-                    help businesses generate leads and sales.
+                    I design and build{" "}
+                    <span className="primary">high-performance websites and web apps</span> with
+                    React and Next.js — from marketing sites and product interfaces to
+                    conversion-focused funnels. With 5+ years of experience and 80+ projects
+                    delivered, I help businesses launch polished experiences that look great,
+                    load fast, and turn visitors into customers.
                   </Reveal>
                 </div>
                 <div className="hero-section-button">
@@ -183,36 +185,7 @@ export default function HomePage({ devProjects, featuredPosts }: HomePageProps) 
       <div className="section">
         <div className="main-container">
           <div className="medium-padding">
-            <div className="service-section">
-              <Reveal className="service-section-text">
-                <SectionHeader eyebrow="SERVICES" title="What I Do" />
-                <div className="about-sub-heading">
-                  <p className="big">
-                    As a Frontend Web Developer and Designer, I specialize in designing and developing
-                    websites that not only look great but also help businesses generate leads and
-                    sales. I use my skills and expertise to build websites that exceed clients&apos;
-                    expectations, from ideation to execution. In addition to my web development
-                    skills, I also have experience in digital marketing and running online ads to a
-                    landing page. I can set up Google Analytics and tracking to monitor website
-                    performance, and design a website that will convert leads into sales.
-                    <br />
-                  </p>
-                </div>
-                <div className="about-paragraph">
-                  <p className="regular">
-                    I can help you with any and all aspects of marketing. I have personally designed
-                    and developed dozens of websites & logos. I have also generated thousands of
-                    leads through digital marketing campaigns.
-                    <br />
-                    With my experience in the field, your ideas will be brought into reality!
-                    <br />
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal className="service-list" delay={0.12}>
-                <ServiceAccordion items={homeServices} />
-              </Reveal>
-            </div>
+            <ServicesPreviewSection />
           </div>
         </div>
       </div>

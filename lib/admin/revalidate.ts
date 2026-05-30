@@ -31,5 +31,7 @@ export function revalidateDevProjectPaths(slug?: string) {
 }
 
 export function revalidateServicePaths() {
+  revalidatePath("/");
   revalidatePath("/about");
+  revalidatePath("/services");
 }

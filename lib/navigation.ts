@@ -2,6 +2,7 @@ export type SitePageId =
   | "home"
   | "about"
   | "projects"
+  | "services"
   | "contact"
   | "videos"
   | "resume"
@@ -16,6 +17,7 @@ type FooterLinkConfig = {
 const FOOTER_LINKS: FooterLinkConfig[] = [
   { id: "home", href: "index.html", label: "Home" },
   { id: "about", href: "about.html", label: "About" },
+  { id: "services", href: "/services", label: "Services" },
   { id: "projects", href: "projects.html", label: "Projects" },
   { id: "resume", href: "/resume", label: "Resume" },
   { id: "contact", href: "contact.html", label: "Contact" },

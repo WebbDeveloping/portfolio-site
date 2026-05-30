@@ -1,18 +1,26 @@
 [
   {
-    "name": "Automations",
-    "slug": "automations",
-    "description": "Looking to take your marketing to the next level? I offer a wide range of automations that will help you manage your marketing tasks. From email marketing, text notifications, to scheduled appointments. I can help you set up a system that works for you. ",
+    "name": "Marketing Sites",
+    "slug": "marketing-sites",
+    "description": "Fast, conversion-focused websites built with modern tools like React, Next.js, and TypeScript. Every site is optimized for performance, SEO, and accessibility — with Lighthouse scores consistently in the 90s. From landing pages to full business sites, I build experiences that look sharp and turn visitors into leads.",
     "icon": "",
     "color": "",
     "projects": [
-      "endohack; solar-initiative; three-sister-boutique; trumotion-martial-arts; dr-brett-chiropractor"
+      "aa-finish-concrete; endohack; solar-initiative; three-sister-boutique; true-nature; trumotion-martial-arts; dr-brett-chiropractor; prime-title-utah; digital-leather-templates"
     ]
   },
   {
-    "name": "Branding",
-    "slug": "branding",
-    "description": "If you're looking for a complete branding make-over for your business - I can help you create a brand that is consistent, professional, and stylish.\nYour custom branding will include everything from choosing the perfect fonts and colors to designing business cards and websites that reflect your brand. ",
+    "name": "Product UI & Web Apps",
+    "slug": "product-ui-web-apps",
+    "description": "Frontend development for web applications, dashboards, and customer-facing products. I design and build responsive interfaces with clean architecture, reusable components, and attention to usability. Whether you need a new product built from scratch or an existing app redesigned, I deliver polished, scalable frontend experiences.",
+    "icon": "",
+    "color": "",
+    "projects": []
+  },
+  {
+    "name": "UI/UX Design & Redesigns",
+    "slug": "ui-ux-design",
+    "description": "End-to-end UI/UX design — from wireframes and prototypes in Figma to fully implemented interfaces. I've led complete redesigns of customer-facing apps and internal admin portals, working directly with stakeholders to define features, user flows, and visual direction that drives results.",
     "icon": "",
     "color": "",
     "projects": [
@@ -20,37 +28,19 @@
     ]
   },
   {
-    "name": "GoHighLevel",
-    "slug": "gohighlevel",
-    "description": "Are you looking for a website to be built or cloned into GoHighLevel? I am experienced in creating custom website and funnel in GoHighLevel that look clean and professional. I'll make sure that your site is user-friendly and looks great, so you can focus on what's important - running your business and generating leads!",
-    "icon": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/62b3fc6e84f4d21059f3ee28_6293a15751a4f4d8251af235.png",
-    "color": "",
-    "projects": [
-      "aa-finish-concrete; trumotion-martial-arts; dr-brett-chiropractor; digital-leather-templates"
-    ]
-  },
-  {
-    "name": "Logo Design",
-    "slug": "logo-design",
-    "description": "I create custom logos that will help you stand out from the competition. My designs are professional, creative, and perfect for any business.",
-    "icon": "",
-    "color": "",
-    "projects": []
-  },
-  {
-    "name": "Marketing",
-    "slug": "marketing",
-    "description": "I am a digital marketer that specializes in running online ads. I have years of experience and I know how to get results. I use the most effective platforms, including Google, Facebook, Instagram, TikTok, and YouTube. ",
+    "name": "Funnels & Integrations",
+    "slug": "funnels-integrations",
+    "description": "Conversion-optimized funnels and landing pages wired up with the tools your business runs on — Stripe payments, custom authentication, analytics tracking, and CRM connections. I build user flows designed to capture leads and close sales, not just pages that look good.",
     "icon": "",
     "color": "",
     "projects": [
-      "endohack; true-nature; three-sister-boutique; solar-initiative; trumotion-martial-arts; dr-brett-chiropractor"
+      "endohack; solar-initiative; three-sister-boutique; trumotion-martial-arts; dr-brett-chiropractor"
     ]
   },
   {
     "name": "Webflow",
     "slug": "webflow",
-    "description": "",
+    "description": "Custom Webflow sites for clients who want a visually polished, CMS-powered website they can manage themselves. I design and build responsive Webflow sites that match your brand and give you full control over content updates without touching code.",
     "icon": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/62b3fc62e27005c9b472a12b_6296e407140a994111dacf08.png",
     "color": "",
     "projects": [
@@ -58,13 +48,13 @@
     ]
   },
   {
-    "name": "Website Design",
-    "slug": "website-design",
-    "description": "I specialize in creating custom websites that are fast, mobile-friendly, and optimized for conversions. I work quickly and will help you get the most out of your website.",
-    "icon": "",
+    "name": "GoHighLevel",
+    "slug": "gohighlevel",
+    "description": "Custom websites and funnels built inside GoHighLevel — ideal for agencies and businesses already on the platform. I design clean, professional GHL sites and landing pages optimized for lead capture, with layouts and flows tested to convert.",
+    "icon": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/62b3fc6e84f4d21059f3ee28_6293a15751a4f4d8251af235.png",
     "color": "",
     "projects": [
-      "aa-finish-concrete; endohack; solar-initiative; three-sister-boutique; true-nature; trumotion-martial-arts; dr-brett-chiropractor; prime-title-utah; digital-leather-templates"
+      "aa-finish-concrete; trumotion-martial-arts; dr-brett-chiropractor; digital-leather-templates"
     ]
   }
 ]

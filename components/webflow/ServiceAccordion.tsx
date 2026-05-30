@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useId, useState } from "react";
-import type { HomeServiceItem } from "@/lib/content/home-services";
+import type { HomeServiceItem } from "@/lib/content/services";
 
 type ServiceAccordionProps = {
   items: HomeServiceItem[];

@@ -2,10 +2,9 @@ import Reveal from "@/components/motion/Reveal";
 import CtaBand from "@/components/ui/CtaBand";
 import PageShell from "@/components/ui/PageShell";
 import SectionHeader from "@/components/ui/SectionHeader";
-import ServiceAccordion from "@/components/webflow/ServiceAccordion";
+import ServicesPreviewSection from "@/components/webflow/ServicesPreviewSection";
 import SiteFooter from "@/components/webflow/SiteFooter";
 import { WebflowLink } from "@/components/webflow/WebflowLink";
-import { homeServices } from "@/lib/content/home-services";
 
 export default function AboutPage() {
   return (
@@ -31,7 +30,7 @@ export default function AboutPage() {
                   </p>
                   <WebflowLink href="/resume" className="learn-more-btn w-inline-block">
                     <div className="project-btn-inside">
-                      <div className="button-text">View resume</div>
+                      <div className="button-text white">View resume</div>
                       <img
                         src="/images/5e783247e7efaf4135a2d97a_right-long-arrow-red.svg"
                         loading="lazy"
@@ -67,36 +66,7 @@ export default function AboutPage() {
       <div className="section">
         <div className="main-container">
           <div className="medium-padding">
-            <div className="service-section">
-              <Reveal className="service-section-text">
-                <SectionHeader eyebrow="SERVICES" title="What I Do" />
-                <div className="about-sub-heading">
-                  <p className="big">
-                    As a Frontend Web Developer and Designer, I specialize in designing and developing
-                    websites that not only look great but also help businesses generate leads and
-                    sales. I use my skills and expertise to build websites that exceed clients&apos;
-                    expectations, from ideation to execution. In addition to my web development
-                    skills, I also have experience in digital marketing and running online ads to a
-                    landing page. I can set up Google Analytics and tracking to monitor website
-                    performance, and design a website that will convert leads into sales.
-                    <br />
-                  </p>
-                </div>
-                <div className="about-paragraph">
-                  <p className="regular">
-                    I can help you with any and all aspects of marketing. I have personally designed
-                    and developed dozens of websites & logos. I have also generated thousands of
-                    leads through digital marketing campaigns.
-                    <br />
-                    With my experience in the field, your ideas will be brought into reality!
-                    <br />
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal className="service-list" delay={0.12}>
-                <ServiceAccordion items={homeServices} />
-              </Reveal>
-            </div>
+            <ServicesPreviewSection />
           </div>
         </div>
       </div>

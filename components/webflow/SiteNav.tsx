@@ -9,6 +9,7 @@ type SiteNavProps = {
 export default function SiteNav({ currentPage }: SiteNavProps) {
   const isHome = currentPage === "home";
   const isAbout = currentPage === "about";
+  const isServices = currentPage === "services";
   const isProjects = currentPage === "projects";
   const isContact = currentPage === "contact";
 
@@ -47,6 +48,12 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
                     {...navLinkProps("navigation-link w-nav-link", isAbout)}
                   >
                     About
+                  </WebflowLink>
+                  <WebflowLink
+                    href="/services"
+                    {...navLinkProps("navigation-link w-nav-link", isServices)}
+                  >
+                    Services
                   </WebflowLink>
                   <WebflowLink
                     href="projects.html"
@@ -108,6 +115,12 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
                 {...navLinkProps("mobile-nav-link w-nav-link", isAbout)}
               >
                 About
+              </WebflowLink>
+              <WebflowLink
+                href="/services"
+                {...navLinkProps("mobile-nav-link w-nav-link", isServices)}
+              >
+                Services
               </WebflowLink>
               <WebflowLink
                 href="projects.html"
