@@ -28,6 +28,13 @@ export async function getDevProjects(): Promise<DevProject[]> {
   return records.map(toDevProject);
 }
 
+export async function getFeaturedDevProjects(limit?: number): Promise<DevProject[]> {
+  const all = await getDevProjects();
+  const featured = all.filter((project) => project.featured);
+  const projects = featured.length > 0 ? featured : all;
+  return limit ? projects.slice(0, limit) : projects;
+}
+
 export async function getDevProjectBySlug(slug: string): Promise<DevProject | undefined> {
   const record = await prisma.devProject.findUnique({ where: { slug } });
   return record ? toDevProject(record) : undefined;

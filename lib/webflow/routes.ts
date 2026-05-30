@@ -2,9 +2,8 @@ const WEBFLOW_ROUTES: Record<string, string> = {
   "index.html": "/",
   "about.html": "/about",
   "projects.html": "/projects",
-  "dev-projects.html": "/dev-projects",
+  "dev-projects.html": "/projects",
   "contact.html": "/contact",
-  "links.html": "/links",
   "joe-webb-youtube-videos.html": "/joe-webb-youtube-videos",
 };
 

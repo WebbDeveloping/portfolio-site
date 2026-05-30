@@ -1,4 +1,4 @@
-import { HomeProjectColumns } from "@/components/cms/ProjectCard";
+import { DevProjectMarquee } from "@/components/cms/DevProjectMarquee";
 import { PostGrid } from "@/components/cms/PostCard";
 import Reveal from "@/components/motion/Reveal";
 import CtaBand from "@/components/ui/CtaBand";
@@ -8,14 +8,14 @@ import ServiceAccordion from "@/components/webflow/ServiceAccordion";
 import SiteFooter from "@/components/webflow/SiteFooter";
 import { WebflowLink } from "@/components/webflow/WebflowLink";
 import { homeServices } from "@/lib/content/home-services";
-import type { Post, Project } from "@/lib/cms/types";
+import type { DevProject, Post } from "@/lib/cms/types";
 
 type HomePageProps = {
-  featuredProjects: Project[];
+  devProjects: DevProject[];
   featuredPosts: Post[];
 };
 
-export default function HomePage({ featuredProjects, featuredPosts }: HomePageProps) {
+export default function HomePage({ devProjects, featuredPosts }: HomePageProps) {
   return (
     <PageShell currentPage="home">
       <div className="section hero">
@@ -83,12 +83,12 @@ export default function HomePage({ featuredProjects, featuredPosts }: HomePagePr
       </div>
       <div className="section">
         <div className="main-container top-padding">
-          <Reveal className="top-content projects">
-            <SectionHeader title="My Custom Website Projects" titleAs="h2" eyebrowAccent={false} />
+          <Reveal className="home-dev-projects-header">
+            <SectionHeader title="Projects I have built" titleAs="h2" eyebrowAccent={false} />
           </Reveal>
-          <div className="project-grid">
-            <HomeProjectColumns projects={featuredProjects} />
-          </div>
+        </div>
+        <DevProjectMarquee projects={devProjects} />
+        <div className="main-container">
           <WebflowLink href="projects.html" className="banner-btn prjct-btn w-inline-block">
             <div className="project-btn-inside">
               <div className="sub-title white no-wrap">View All Projects</div>

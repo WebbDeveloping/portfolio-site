@@ -8,9 +8,6 @@ import SiteFooter from "@/components/webflow/SiteFooter";
 import type { Project } from "@/lib/cms/types";
 import { uniqueUrls } from "@/lib/cms/utils";
 
-const PROJECT_DETAIL_WF_PAGE_ID = "62b4e3f87b892d3cf411daa9";
-const PROJECT_DETAIL_WF_ELEMENT_ID = "fdb2fec5-5e12-ff0e-e5de-867bd40b60ee";
-
 type ProjectDetailPageProps = {
   project: Project;
 };
@@ -175,11 +172,7 @@ export default function ProjectDetailPage({ project }: ProjectDetailPageProps) {
         </div>
       ) : null}
 
-      <ContactSection
-        wfPageId={PROJECT_DETAIL_WF_PAGE_ID}
-        wfElementId={PROJECT_DETAIL_WF_ELEMENT_ID}
-        textClassName="contact-section-text top"
-      />
+      <ContactSection textClassName="contact-section-text top" />
 
       <SiteFooter currentPage={null} />
     </PageShell>

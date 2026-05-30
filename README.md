@@ -11,7 +11,7 @@ Personal portfolio and marketing site for [Joe Webb Designs](https://www.joewebb
 
 ## Features
 
-- Static marketing pages (home, about, projects, contact, links, YouTube hub)
+- Static marketing pages (home, about, projects, contact, YouTube hub)
 - CMS-style detail pages for projects, blog posts, and YouTube videos
 - File-based content in `content/` (exported from Webflow collections)
 - SEO metadata aligned with the original Webflow page config
@@ -27,7 +27,6 @@ Personal portfolio and marketing site for [Joe Webb Designs](https://www.joewebb
 | `/project/[slug]` | Project case study |
 | `/post/[slug]` | Blog post |
 | `/contact` | Contact |
-| `/links` | Social / link hub |
 | `/joe-webb-youtube-videos` | YouTube video listing |
 | `/youtube-video/[slug]` | Single video |
 

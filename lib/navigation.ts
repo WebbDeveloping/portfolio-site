@@ -2,13 +2,12 @@ export type SitePageId =
   | "home"
   | "about"
   | "projects"
-  | "dev-projects"
   | "contact"
   | "videos"
   | null;
 
 type FooterLinkConfig = {
-  id: Exclude<SitePageId, null> | "links";
+  id: Exclude<SitePageId, null>;
   href: string;
   label: string;
 };
@@ -18,7 +17,6 @@ const FOOTER_LINKS: FooterLinkConfig[] = [
   { id: "about", href: "about.html", label: "About" },
   { id: "projects", href: "projects.html", label: "Projects" },
   { id: "contact", href: "contact.html", label: "Contact" },
-  { id: "links", href: "links.html", label: "Links" },
 ];
 
 export type FooterLink = {

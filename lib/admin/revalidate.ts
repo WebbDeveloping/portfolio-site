@@ -24,7 +24,7 @@ export function revalidateVideoPaths(slug?: string) {
 }
 
 export function revalidateDevProjectPaths(slug?: string) {
-  revalidatePath("/dev-projects");
+  revalidatePath("/projects");
   if (slug) {
     revalidatePath(`/dev-project/${slug}`);
   }

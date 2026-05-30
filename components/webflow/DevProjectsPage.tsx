@@ -11,9 +11,9 @@ type DevProjectsPageProps = {
 
 export default function DevProjectsPage({ projects }: DevProjectsPageProps) {
   return (
-    <PageShell currentPage="dev-projects">
+    <PageShell currentPage="projects">
       <PageHero
-        title="Dev Projects"
+        title="Projects"
         className="dev-page-hero dev-projects-page-hero"
         padding="small"
         titleClassName="mb-16px"
@@ -36,7 +36,7 @@ export default function DevProjectsPage({ projects }: DevProjectsPageProps) {
           </div>
         </div>
       </div>
-      <SiteFooter currentPage="dev-projects" />
+      <SiteFooter currentPage="projects" />
     </PageShell>
   );
 }

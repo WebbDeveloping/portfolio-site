@@ -38,13 +38,12 @@ export const WEBFLOW_PAGES: WebflowPageConfig[] = [
   },
   {
     htmlFile: "projects.html",
-    componentName: "ProjectsPage",
+    componentName: "DevProjectsPage",
     route: "/projects",
     wfPageId: "62b4e3f87b892d702b11dab0",
     bodyClass: "body",
-    title: "Joe Webb Designs | Professional Web Design & Development",
-    description:
-      "I am Joe Webb, a website developer and online entrepreneur. I have designed and developed dozens of websites to help generate thousands of leads for companies across the United States.",
+    title: "Projects | Joe Webb Designs",
+    description: "Software projects I've built — APIs, apps, and developer tools.",
     ogImage:
       "https://uploads-ssl.webflow.com/60a197545c7bb00bdddb264a/61773299073c36b0ecb78c93_Screen%20Shot%202021-10-25%20at%204.41.25%20PM.png",
   },
@@ -55,18 +54,6 @@ export const WEBFLOW_PAGES: WebflowPageConfig[] = [
     wfPageId: "62b4e3f87b892db85711daa7",
     bodyClass: "body",
     title: "Contact",
-    description:
-      "I am Joe Webb, a website developer and online entrepreneur. I have designed and developed dozens of websites to help generate thousands of leads for companies across the United States.",
-    ogImage:
-      "https://uploads-ssl.webflow.com/60a197545c7bb00bdddb264a/61773299073c36b0ecb78c93_Screen%20Shot%202021-10-25%20at%204.41.25%20PM.png",
-  },
-  {
-    htmlFile: "links.html",
-    componentName: "LinksPage",
-    route: "/links",
-    wfPageId: "62b4e3f87b892da0f311daad",
-    bodyClass: "body",
-    title: "Joe Webb Designs | Professional Web Design & Development",
     description:
       "I am Joe Webb, a website developer and online entrepreneur. I have designed and developed dozens of websites to help generate thousands of leads for companies across the United States.",
     ogImage:

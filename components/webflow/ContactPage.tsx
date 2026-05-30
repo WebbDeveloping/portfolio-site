@@ -6,7 +6,7 @@ import SiteFooter from "@/components/webflow/SiteFooter";
 export default function ContactPage() {
   return (
     <PageShell currentPage="contact">
-      <ContactSection sectionClassName="section black-bg padding-top" showRecaptcha />
+      <ContactSection sectionClassName="section black-bg padding-top" />
       <CtaBand />
       <SiteFooter currentPage="contact" />
     </PageShell>

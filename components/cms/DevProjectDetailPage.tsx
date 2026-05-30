@@ -8,9 +8,6 @@ import SiteFooter from "@/components/webflow/SiteFooter";
 import type { DevProject } from "@/lib/cms/types";
 import type { CSSProperties } from "react";
 
-const DEV_PROJECT_DETAIL_WF_PAGE_ID = "62b4e3f87b892d3cf411daa9";
-const DEV_PROJECT_DETAIL_WF_ELEMENT_ID = "fdb2fec5-5e12-ff0e-e5de-867bd40b60ee";
-
 type DevProjectDetailPageProps = {
   project: DevProject;
 };
@@ -40,7 +37,7 @@ export default function DevProjectDetailPage({ project }: DevProjectDetailPagePr
   const accent = project.accentColor ?? "var(--tomato, #ea5342)";
 
   return (
-    <PageShell currentPage="dev-projects">
+    <PageShell currentPage="projects">
       <PageHero
         title={project.name}
         className="dev-page-hero dev-project-detail-hero"
@@ -151,13 +148,9 @@ export default function DevProjectDetailPage({ project }: DevProjectDetailPagePr
         </div>
       ) : null}
 
-      <ContactSection
-        wfPageId={DEV_PROJECT_DETAIL_WF_PAGE_ID}
-        wfElementId={DEV_PROJECT_DETAIL_WF_ELEMENT_ID}
-        textClassName="contact-section-text top"
-      />
+      <ContactSection textClassName="contact-section-text top" />
 
-      <SiteFooter currentPage="dev-projects" />
+      <SiteFooter currentPage="projects" />
     </PageShell>
   );
 }

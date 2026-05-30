@@ -1,4 +1,3 @@
-import AboutDropdown from "@/components/webflow/AboutDropdown";
 import { WebflowLink } from "@/components/webflow/WebflowLink";
 import { postPath } from "@/lib/cms/paths";
 import { navLinkProps, type SitePageId } from "@/lib/navigation";
@@ -11,7 +10,6 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
   const isHome = currentPage === "home";
   const isAbout = currentPage === "about";
   const isProjects = currentPage === "projects";
-  const isDevProjects = currentPage === "dev-projects";
   const isContact = currentPage === "contact";
 
   return (
@@ -44,12 +42,12 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
                   >
                     Home
                   </WebflowLink>
-                  <AboutDropdown
-                    variant="desktop"
-                    isAbout={isAbout}
-                    isProjects={isProjects}
-                    isDevProjects={isDevProjects}
-                  />
+                  <WebflowLink
+                    href="about.html"
+                    {...navLinkProps("navigation-link w-nav-link", isAbout)}
+                  >
+                    About
+                  </WebflowLink>
                   <WebflowLink
                     href="projects.html"
                     {...navLinkProps("navigation-link w-nav-link", isProjects)}
@@ -105,12 +103,12 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
               >
                 Home
               </WebflowLink>
-              <AboutDropdown
-                variant="mobile"
-                isAbout={isAbout}
-                isProjects={isProjects}
-                isDevProjects={isDevProjects}
-              />
+              <WebflowLink
+                href="about.html"
+                {...navLinkProps("mobile-nav-link w-nav-link", isAbout)}
+              >
+                About
+              </WebflowLink>
               <WebflowLink
                 href="projects.html"
                 {...navLinkProps("mobile-nav-link w-nav-link", isProjects)}
