@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Automations",
+    "slug": "automations",
+    "description": "Looking to take your marketing to the next level? I offer a wide range of automations that will help you manage your marketing tasks. From email marketing, text notifications, to scheduled appointments. I can help you set up a system that works for you. ",
+    "icon": "",
+    "color": "",
+    "projects": [
+      "endohack; solar-initiative; three-sister-boutique; trumotion-martial-arts; dr-brett-chiropractor"
+    ]
+  },
+  {
+    "name": "Branding",
+    "slug": "branding",
+    "description": "If you're looking for a complete branding make-over for your business - I can help you create a brand that is consistent, professional, and stylish.\nYour custom branding will include everything from choosing the perfect fonts and colors to designing business cards and websites that reflect your brand. ",
+    "icon": "",
+    "color": "",
+    "projects": [
+      "endohack; solar-initiative; three-sister-boutique; prime-title-utah; digital-leather-templates"
+    ]
+  },
+  {
+    "name": "GoHighLevel",
+    "slug": "gohighlevel",
+    "description": "Are you looking for a website to be built or cloned into GoHighLevel? I am experienced in creating custom website and funnel in GoHighLevel that look clean and professional. I'll make sure that your site is user-friendly and looks great, so you can focus on what's important - running your business and generating leads!",
+    "icon": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/62b3fc6e84f4d21059f3ee28_6293a15751a4f4d8251af235.png",
+    "color": "",
+    "projects": [
+      "aa-finish-concrete; trumotion-martial-arts; dr-brett-chiropractor; digital-leather-templates"
+    ]
+  },
+  {
+    "name": "Logo Design",
+    "slug": "logo-design",
+    "description": "I create custom logos that will help you stand out from the competition. My designs are professional, creative, and perfect for any business.",
+    "icon": "",
+    "color": "",
+    "projects": []
+  },
+  {
+    "name": "Marketing",
+    "slug": "marketing",
+    "description": "I am a digital marketer that specializes in running online ads. I have years of experience and I know how to get results. I use the most effective platforms, including Google, Facebook, Instagram, TikTok, and YouTube. ",
+    "icon": "",
+    "color": "",
+    "projects": [
+      "endohack; true-nature; three-sister-boutique; solar-initiative; trumotion-martial-arts; dr-brett-chiropractor"
+    ]
+  },
+  {
+    "name": "Webflow",
+    "slug": "webflow",
+    "description": "",
+    "icon": "https://uploads-ssl.webflow.com/6104d73a27db50b91d2b6c77/62b3fc62e27005c9b472a12b_6296e407140a994111dacf08.png",
+    "color": "",
+    "projects": [
+      "prime-title-utah; solar-initiative; three-sister-boutique; true-nature; endohack"
+    ]
+  },
+  {
+    "name": "Website Design",
+    "slug": "website-design",
+    "description": "I specialize in creating custom websites that are fast, mobile-friendly, and optimized for conversions. I work quickly and will help you get the most out of your website.",
+    "icon": "",
+    "color": "",
+    "projects": [
+      "aa-finish-concrete; endohack; solar-initiative; three-sister-boutique; true-nature; trumotion-martial-arts; dr-brett-chiropractor; prime-title-utah; digital-leather-templates"
+    ]
+  }
+]

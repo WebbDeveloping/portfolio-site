@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import HomePage from "@/components/webflow/HomePage";
+import AboutPage from "@/components/webflow/AboutPage";
 import WebflowPageShell from "@/components/webflow/WebflowPageShell";
-import { getFeaturedPosts, getFeaturedProjects } from "@/lib/cms/data";
 import { buildWebflowMetadata, getWebflowPageByHtmlFile } from "@/lib/webflow/page-config";
 
-const pageConfig = getWebflowPageByHtmlFile("index.html")!;
+const pageConfig = getWebflowPageByHtmlFile("about.html")!;
 
 export const metadata: Metadata = buildWebflowMetadata(pageConfig);
 
 export default function Page() {
-  const featuredProjects = getFeaturedProjects(2);
-  const featuredPosts = getFeaturedPosts();
-
   return (
     <WebflowPageShell wfPageId={pageConfig.wfPageId} bodyClass={pageConfig.bodyClass}>
-      <HomePage featuredProjects={featuredProjects} featuredPosts={featuredPosts} />
+      <AboutPage />
     </WebflowPageShell>
   );
 }
