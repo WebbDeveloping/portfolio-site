@@ -16,8 +16,7 @@ export default function AnimatedCta() {
       </div>
       <Reveal delay={0.16}>
         <WebflowLink
-          href="https://start-project.joewebbdesigns.com/project-details"
-          target="_blank"
+          href="/start-project"
           className="banner-btn w-inline-block"
         >
           <div className="project-btn-inside">

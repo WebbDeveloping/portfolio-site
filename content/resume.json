@@ -1,0 +1,102 @@
+{
+  "headline": "Product-focused Frontend Engineer",
+  "contact": {
+    "email": "webbdeveloping@gmail.com",
+    "location": "Sandy, Utah",
+    "website": "https://www.joewebbdesigns.com",
+    "linkedin": "https://www.linkedin.com/in/josephdwebb/",
+    "github": "https://github.com/WebbDeveloping"
+  },
+  "summary": "Product-focused Frontend Engineer with 5+ years of experience building modern web applications and high-performing marketing websites. Specializes in React, Next.js, and TypeScript with a strong UI/UX design background. Experienced in leading frontend architecture, designing scalable component systems, and delivering conversion-focused user experiences. Proven track record of building 80+ websites and improving SEO, performance, and accessibility to near-perfect scores.",
+  "skills": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript (ES6+)",
+    "Tailwind CSS",
+    "HTML5",
+    "CSS3",
+    "Node.js",
+    "Express",
+    "REST APIs",
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "Figma",
+    "Wireframing",
+    "Prototyping",
+    "Design Systems",
+    "Accessibility (WCAG)",
+    "Git",
+    "GitHub",
+    "Jira",
+    "Vercel",
+    "Docker (basic)",
+    "Material UI",
+    "SEO",
+    "Google Analytics",
+    "Google Tag Manager",
+    "Funnels",
+    "GoHighLevel",
+    "Stripe Payments",
+    "Authentication Systems",
+    "Performance Optimization"
+  ],
+  "experience": [
+    {
+      "company": "Exploro / MyAltitudeRewards / KIXA",
+      "title": "Frontend Team Lead / UI/UX Engineer",
+      "location": "Lehi, Utah",
+      "start": "Sep 2022",
+      "end": "Present",
+      "bullets": [
+        "Led frontend development and UI/UX design for a multi-platform web application from concept through multiple product iterations",
+        "Managed and mentored a team of 4 developers/designers, guiding architecture and implementation decisions",
+        "Designed and built scalable frontend architecture using React, Next.js, and TypeScript",
+        "Created and maintained reusable component libraries to ensure consistency and development speed",
+        "Owned full UI/UX redesign of both customer-facing application and internal admin portal",
+        "Collaborated directly with leadership to define product direction, features, and user experience",
+        "Built responsive, high-performance interfaces optimized for usability and accessibility",
+        "Implemented modern frontend best practices including modular architecture and performance optimization"
+      ]
+    },
+    {
+      "company": "Self-Employed",
+      "title": "Freelance Web Developer & UI/UX Designer",
+      "location": "Remote",
+      "start": "Apr 2019",
+      "end": "Present",
+      "bullets": [
+        "Designed and developed 80+ websites including business sites, landing pages, funnels, and custom web applications",
+        "Achieved top Google search rankings for multiple client websites through advanced SEO strategies",
+        "Consistently delivered high-performance websites (Lighthouse scores up to 95+ performance, 100 SEO/accessibility)",
+        "Built full-stack applications using React, Next.js, Node.js, and SQL databases",
+        "Integrated Stripe payment systems and custom authentication solutions",
+        "Improved client conversion rates through UX-focused design and optimized user flows",
+        "Worked directly with clients to define requirements, design solutions, and execute marketing strategies"
+      ]
+    },
+    {
+      "company": "Optimize Marketing",
+      "title": "Digital Marketing & Web Developer",
+      "location": "Remote",
+      "start": "Jan 2021",
+      "end": "Jul 2022",
+      "bullets": [
+        "Built websites and marketing funnels using WordPress, GoHighLevel, and ClickFunnels",
+        "Managed client relationships and executed digital marketing campaigns",
+        "Developed skills in conversion optimization, analytics, and creative design"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "DevMountain Coding Bootcamp",
+      "degree": "Full-Stack Web Development",
+      "start": "2018",
+      "end": "2019"
+    }
+  ],
+  "featuredProjectSlugs": ["portfolio-cms", "taskflow-api"],
+  "pdfFilename": "joe-webb-resume.pdf"
+}

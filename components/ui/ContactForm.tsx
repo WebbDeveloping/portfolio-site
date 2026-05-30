@@ -89,21 +89,22 @@ export default function ContactForm() {
             disabled={pending}
           />
         </form>
-      ) : null}
-      <div className="w-form-done" style={isSuccess ? { display: "block" } : undefined}>
-        <div>Thank you! Your submission has been received!</div>
-      </div>
-      <div
-        className="w-form-fail"
-        style={isError ? { display: "block" } : undefined}
-      >
-        <div>
+      ) : (
+        <div className="contact-form-success" role="status" aria-live="polite">
+          <p className="contact-form-success__title">Thank you!</p>
+          <p className="contact-form-success__text">
+            Your message has been received. I&apos;ll get back to you soon.
+          </p>
+        </div>
+      )}
+      {isError ? (
+        <div className="contact-form-error" role="alert">
           {state.formError ??
             (state.fieldErrors
               ? "Please fix the errors above and try again."
-              : "Oops! Something went wrong while submitting the form.")}
+              : "Something went wrong while submitting the form. Please try again.")}
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }

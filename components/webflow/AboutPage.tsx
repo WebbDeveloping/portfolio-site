@@ -4,6 +4,7 @@ import PageShell from "@/components/ui/PageShell";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ServiceAccordion from "@/components/webflow/ServiceAccordion";
 import SiteFooter from "@/components/webflow/SiteFooter";
+import { WebflowLink } from "@/components/webflow/WebflowLink";
 import { homeServices } from "@/lib/content/home-services";
 
 export default function AboutPage() {
@@ -28,6 +29,17 @@ export default function AboutPage() {
                     sites that are optimized for conversion rates. <br />
                     ‍<br />
                   </p>
+                  <WebflowLink href="/resume" className="learn-more-btn w-inline-block">
+                    <div className="project-btn-inside">
+                      <div className="button-text">View resume</div>
+                      <img
+                        src="/images/5e783247e7efaf4135a2d97a_right-long-arrow-red.svg"
+                        loading="lazy"
+                        alt=""
+                        className="btn-arrow ml-10px"
+                      />
+                    </div>
+                  </WebflowLink>
                 </Reveal>
                 <Reveal immediate className="about-image-wrapper" delay={0.12}>
                   <img
