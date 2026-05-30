@@ -20,7 +20,7 @@ export default function DevProjectsPage({ projects }: DevProjectsPageProps) {
         subtitle={
           <>
             <RevealParagraph />
-            <WebflowLink href="#projects" className="btn-arrow-down-red mb-8px w-inline-block">
+            <WebflowLink href="#projects" className="btn-arrow-down-red w-inline-block">
               <div className="inside-button-container">
                 <div className="button-text red">View Projects</div>
                 <img src="/images/down-arrow.svg" loading="lazy" alt="" className="image arrow" />

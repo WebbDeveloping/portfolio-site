@@ -43,7 +43,7 @@ export default function DevProjectDetailPage({ project }: DevProjectDetailPagePr
     <PageShell currentPage="dev-projects">
       <PageHero
         title={project.name}
-        className="dev-page-hero"
+        className="dev-page-hero dev-project-detail-hero"
         padding="small"
         subtitle={
           <>
@@ -85,7 +85,7 @@ export default function DevProjectDetailPage({ project }: DevProjectDetailPagePr
       <div className="section bg-jet">
         <div className="main-container">
           <div className="small-padding">
-            <Reveal className="about-section">
+            <Reveal className="dev-project-detail__overview">
               <SectionHeader eyebrow="Summary" eyebrowVariant="caption" title="Overview" />
               <div className="about-paragraph">
                 <p className="regular">{project.description}</p>
