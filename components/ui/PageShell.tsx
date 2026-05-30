@@ -6,20 +6,10 @@ import type { ReactNode } from "react";
 
 type PageShellProps = {
   currentPage: SitePageId;
-  /** Minimal shell for standalone pages like /links (no nav, captions, or footer). */
-  variant?: "default" | "minimal";
   children: ReactNode;
 };
 
-export default function PageShell({
-  currentPage,
-  variant = "default",
-  children,
-}: PageShellProps) {
-  if (variant === "minimal") {
-    return <>{children}</>;
-  }
-
+export default function PageShell({ currentPage, children }: PageShellProps) {
   return (
     <>
       <SiteNav currentPage={currentPage} />
@@ -35,16 +25,13 @@ type PageShellWithFooterProps = PageShellProps & {
 
 export function PageShellWithFooter({
   currentPage,
-  variant = "default",
   showFooter = true,
   children,
 }: PageShellWithFooterProps) {
   return (
-    <PageShell currentPage={currentPage} variant={variant}>
+    <PageShell currentPage={currentPage}>
       {children}
-      {showFooter && variant === "default" ? (
-        <SiteFooter currentPage={currentPage} />
-      ) : null}
+      {showFooter ? <SiteFooter currentPage={currentPage} /> : null}
     </PageShell>
   );
 }
