@@ -9,6 +9,7 @@ type AboutDropdownProps = {
   variant: "desktop" | "mobile";
   isAbout: boolean;
   isProjects: boolean;
+  isDevProjects: boolean;
 };
 
 type DropdownLink = {
@@ -20,11 +21,13 @@ type DropdownLink = {
 function getLinks(
   isAbout: boolean,
   isProjects: boolean,
+  isDevProjects: boolean,
   includeExtra: boolean,
 ): DropdownLink[] {
   const links: DropdownLink[] = [
     { href: "about.html", label: "About Me", current: isAbout },
-    { href: "projects.html", label: "My Projects", current: isProjects },
+    { href: "projects.html", label: "Client Projects", current: isProjects },
+    { href: "dev-projects.html", label: "Dev Projects", current: isDevProjects },
   ];
 
   if (includeExtra) {
@@ -42,13 +45,14 @@ export default function AboutDropdown({
   variant,
   isAbout,
   isProjects,
+  isDevProjects,
 }: AboutDropdownProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const panelId = useId();
   const isDesktop = variant === "desktop";
-  const isActive = isAbout || isProjects;
-  const links = getLinks(isAbout, isProjects, !isDesktop);
+  const isActive = isAbout || isProjects || isDevProjects;
+  const links = getLinks(isAbout, isProjects, isDevProjects, !isDesktop);
 
   useEffect(() => {
     if (!open) return;

@@ -1176,6 +1176,10 @@ blockquote {
   position: relative;
 }
 
+.image-wrapper.portfolio-image-wrapper--layered .mobile-image {
+  top: 10%;
+}
+
 .image-3 {
   filter: grayscale();
 }
@@ -3576,6 +3580,10 @@ blockquote {
     left: 43%;
   }
 
+  .image-wrapper.portfolio-image-wrapper--layered .mobile-image {
+    top: 22%;
+  }
+
   .client-feedback-left, .client-feedback-right {
     width: 100%;
     padding-top: 40px;
@@ -4038,6 +4046,10 @@ blockquote {
     height: 15em;
     top: 18%;
     left: 41%;
+  }
+
+  .image-wrapper.portfolio-image-wrapper--layered .mobile-image {
+    top: 26%;
   }
 
   .client-feedback-left {

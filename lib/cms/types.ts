@@ -40,6 +40,23 @@ export type Video = {
   publishedOn: string;
 };
 
+export type DevProject = {
+  name: string;
+  slug: string;
+  tagline: string;
+  description: string;
+  stack: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+  featured: boolean;
+  heroImage?: string;
+  accentColor?: string;
+  year?: string;
+  problem?: string;
+  solution?: string;
+  features?: string[];
+};
+
 export type Service = {
   name: string;
   slug: string;

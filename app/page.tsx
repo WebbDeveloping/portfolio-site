@@ -7,10 +7,11 @@ import { buildWebflowMetadata, getWebflowPageByHtmlFile } from "@/lib/webflow/pa
 const pageConfig = getWebflowPageByHtmlFile("index.html")!;
 
 export const metadata: Metadata = buildWebflowMetadata(pageConfig);
+export const dynamic = "force-dynamic";
 
-export default function Page() {
-  const featuredProjects = getFeaturedProjects(2);
-  const featuredPosts = getFeaturedPosts();
+export default async function Page() {
+  const featuredProjects = await getFeaturedProjects(2);
+  const featuredPosts = await getFeaturedPosts();
 
   return (
     <WebflowPageShell wfPageId={pageConfig.wfPageId} bodyClass={pageConfig.bodyClass}>

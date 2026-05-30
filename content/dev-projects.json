@@ -1,0 +1,44 @@
+[
+  {
+    "name": "TaskFlow API",
+    "slug": "taskflow-api",
+    "tagline": "REST API for team task management",
+    "description": "A production-ready task management API with authentication, role-based access, and real-time webhooks.",
+    "stack": ["Node.js", "Express", "PostgreSQL", "Redis", "Docker"],
+    "githubUrl": "https://github.com/example/taskflow-api",
+    "liveUrl": "https://api.taskflow.example.com/docs",
+    "featured": true,
+    "accentColor": "#6366f1",
+    "year": "2025",
+    "problem": "Teams needed a lightweight alternative to heavyweight project tools — something developers could self-host and extend via API.",
+    "solution": "Built a modular REST API with JWT auth, PostgreSQL persistence, Redis caching, and OpenAPI documentation. Deployed via Docker Compose with CI/CD on GitHub Actions.",
+    "features": [
+      "JWT authentication with refresh tokens",
+      "Role-based access control (admin, member, viewer)",
+      "Webhook events for task create/update/delete",
+      "OpenAPI 3.0 spec with Swagger UI",
+      "Docker Compose for local and production deploys"
+    ]
+  },
+  {
+    "name": "Portfolio CMS",
+    "slug": "portfolio-cms",
+    "tagline": "Headless content layer for this site",
+    "description": "A JSON-driven content system powering this portfolio — projects, posts, and videos without a traditional CMS.",
+    "stack": ["Next.js", "TypeScript", "React", "Framer Motion"],
+    "githubUrl": "https://github.com/example/portfolio",
+    "liveUrl": "https://joewebbdesigns.com",
+    "featured": true,
+    "accentColor": "#ea5342",
+    "year": "2026",
+    "problem": "The original Webflow CMS was hard to maintain and didn't support the custom dev workflow needed for ongoing updates.",
+    "solution": "Migrated to a Next.js app with flat-file JSON content, preserving the original Webflow design while gaining full control over routing, performance, and new page types.",
+    "features": [
+      "JSON content files with TypeScript types",
+      "Static generation for fast page loads",
+      "Webflow CSS preserved for brand consistency",
+      "Separate content models for client vs dev projects",
+      "Framer Motion scroll reveals"
+    ]
+  }
+]

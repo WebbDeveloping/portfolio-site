@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model Project {
+  id                 String   @id @default(cuid())
+  slug               String   @unique
+  name               String
+  client             String   @default("")
+  clientLogo         String   @default("")
+  servicesRendered   String   @default("") @db.Text
+  featured           Boolean  @default(false)
+  mainImage          String   @default("")
+  largeDesktopImg    String   @default("")
+  standardDesktopImg String   @default("")
+  tabletImg          String   @default("")
+  mobileImg          String   @default("")
+  additionalPhotos   Json     @default("[]")
+  projectOverview    String   @default("") @db.Text
+  projectContribution String  @default("") @db.Text
+  clientFeedback     String   @default("") @db.Text
+  finalThought       String   @default("") @db.Text
+  services           Json     @default("[]")
+  liveLink           String   @default("")
+  platformLogo       String   @default("")
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Post {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  name            String
+  postBody        String   @default("") @db.Text
+  postSummary     String   @default("") @db.Text
+  mainImage       String   @default("")
+  thumbnailImage  String   @default("")
+  featured        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Video {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  featuredImage String   @default("")
+  youtubeUrl    String   @default("")
+  featuredVideo Boolean  @default(false)
+  mainFeature   Boolean  @default(false)
+  publishedOn   String   @default("")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model DevProject {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  tagline     String   @default("")
+  description String   @default("") @db.Text
+  stack       Json     @default("[]")
+  githubUrl   String?
+  liveUrl     String?
+  featured    Boolean  @default(false)
+  heroImage   String?
+  accentColor String?
+  year        String?
+  problem     String?  @db.Text
+  solution    String?  @db.Text
+  features    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String   @default("") @db.Text
+  icon        String   @default("")
+  color       String   @default("")
+  projects    Json     @default("[]")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

@@ -2,6 +2,7 @@ export type SitePageId =
   | "home"
   | "about"
   | "projects"
+  | "dev-projects"
   | "contact"
   | "videos"
   | null;

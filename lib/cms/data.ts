@@ -1,71 +1,94 @@
-import fs from "node:fs";
-import path from "node:path";
-import type { Post, Project, Service, Video } from "@/lib/cms/types";
+import {
+  toDevProject,
+  toPost,
+  toProject,
+  toService,
+  toVideo,
+} from "@/lib/cms/mappers";
+import type { DevProject, Post, Project, Service, Video } from "@/lib/cms/types";
+import { prisma } from "@/lib/db";
 
-const CONTENT_DIR = path.join(process.cwd(), "content");
-
-function readJson<T>(filename: string): T[] {
-  const filePath = path.join(CONTENT_DIR, filename);
-  const content = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(content) as T[];
+export async function getProjects(): Promise<Project[]> {
+  const records = await prisma.project.findMany({ orderBy: { name: "asc" } });
+  return records.map(toProject);
 }
 
-export function getProjects(): Project[] {
-  return readJson<Project>("projects.json");
-}
-
-export function getFeaturedProjects(limit?: number): Project[] {
-  const featured = getProjects().filter((project) => project.featured);
+export async function getFeaturedProjects(limit?: number): Promise<Project[]> {
+  const featured = (await getProjects()).filter((project) => project.featured);
   return limit ? featured.slice(0, limit) : featured;
 }
 
-export function getProjectBySlug(slug: string): Project | undefined {
-  return getProjects().find((project) => project.slug === slug);
+export async function getProjectBySlug(slug: string): Promise<Project | undefined> {
+  const record = await prisma.project.findUnique({ where: { slug } });
+  return record ? toProject(record) : undefined;
 }
 
-export function getPosts(): Post[] {
-  return readJson<Post>("posts.json");
+export async function getDevProjects(): Promise<DevProject[]> {
+  const records = await prisma.devProject.findMany({ orderBy: { name: "asc" } });
+  return records.map(toDevProject);
 }
 
-export function getFeaturedPosts(limit?: number): Post[] {
-  const featured = getPosts().filter((post) => post.featured);
+export async function getDevProjectBySlug(slug: string): Promise<DevProject | undefined> {
+  const record = await prisma.devProject.findUnique({ where: { slug } });
+  return record ? toDevProject(record) : undefined;
+}
+
+export async function getPosts(): Promise<Post[]> {
+  const records = await prisma.post.findMany({ orderBy: { name: "asc" } });
+  return records.map(toPost);
+}
+
+export async function getFeaturedPosts(limit?: number): Promise<Post[]> {
+  const featured = (await getPosts()).filter((post) => post.featured);
   return limit ? featured.slice(0, limit) : featured;
 }
 
-export function getPostBySlug(slug: string): Post | undefined {
-  return getPosts().find((post) => post.slug === slug);
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+  const record = await prisma.post.findUnique({ where: { slug } });
+  return record ? toPost(record) : undefined;
 }
 
-export function getVideos(): Video[] {
-  return readJson<Video>("videos.json");
+export async function getVideos(): Promise<Video[]> {
+  const records = await prisma.video.findMany({ orderBy: { title: "asc" } });
+  return records.map(toVideo);
 }
 
-export function getMainFeaturedVideo(): Video | undefined {
-  return getVideos().find((video) => video.mainFeature);
+export async function getMainFeaturedVideo(): Promise<Video | undefined> {
+  const record = await prisma.video.findFirst({ where: { mainFeature: true } });
+  return record ? toVideo(record) : undefined;
 }
 
-export function getFeaturedVideos(): Video[] {
-  return getVideos().filter((video) => video.featuredVideo);
+export async function getFeaturedVideos(): Promise<Video[]> {
+  const records = await prisma.video.findMany({
+    where: { featuredVideo: true },
+    orderBy: { title: "asc" },
+  });
+  return records.map(toVideo);
 }
 
-export function getVideoBySlug(slug: string): Video | undefined {
-  return getVideos().find((video) => video.slug === slug);
+export async function getVideoBySlug(slug: string): Promise<Video | undefined> {
+  const record = await prisma.video.findUnique({ where: { slug } });
+  return record ? toVideo(record) : undefined;
 }
 
-export function getServices(): Service[] {
-  return readJson<Service>("services.json");
+export async function getServices(): Promise<Service[]> {
+  const records = await prisma.service.findMany({ orderBy: { name: "asc" } });
+  return records.map(toService);
 }
 
-export function getServiceBySlug(slug: string): Service | undefined {
-  return getServices().find((service) => service.slug === slug);
+export async function getServiceBySlug(slug: string): Promise<Service | undefined> {
+  const record = await prisma.service.findUnique({ where: { slug } });
+  return record ? toService(record) : undefined;
 }
 
-export function getHomeFeaturedVideos(): {
+export async function getHomeFeaturedVideos(): Promise<{
   main: Video | undefined;
   sidebar: Video[];
-} {
-  const videos = getVideos();
-  const main = videos.find((video) => video.mainFeature) ?? videos.find((video) => video.featuredVideo);
+}> {
+  const videos = await getVideos();
+  const main =
+    videos.find((video) => video.mainFeature) ??
+    videos.find((video) => video.featuredVideo);
   const sidebar = videos
     .filter((video) => video.featuredVideo && video.slug !== main?.slug)
     .slice(0, 4);
@@ -73,9 +96,9 @@ export function getHomeFeaturedVideos(): {
   return { main, sidebar };
 }
 
-export function getYoutubePageFeaturedVideos(): {
+export async function getYoutubePageFeaturedVideos(): Promise<{
   main: Video | undefined;
   sidebar: Video[];
-} {
+}> {
   return getHomeFeaturedVideos();
 }

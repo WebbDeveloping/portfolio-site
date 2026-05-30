@@ -2,6 +2,7 @@ const WEBFLOW_ROUTES: Record<string, string> = {
   "index.html": "/",
   "about.html": "/about",
   "projects.html": "/projects",
+  "dev-projects.html": "/dev-projects",
   "contact.html": "/contact",
   "links.html": "/links",
   "joe-webb-youtube-videos.html": "/joe-webb-youtube-videos",
@@ -12,6 +13,7 @@ const SITE_HOSTS = new Set(["www.joewebbdesigns.com", "joewebbdesigns.com"]);
 function normalizeSitePath(pathname: string): string {
   if (pathname.startsWith("/post/")) return pathname;
   if (pathname.startsWith("/project/")) return pathname;
+  if (pathname.startsWith("/dev-project/")) return pathname;
   return pathname;
 }
 
