@@ -534,7 +534,7 @@ blockquote {
 
 .slash-svg {
   z-index: 1;
-  opacity: .7;
+  opacity: .45;
   width: 100%;
   max-width: 40vw;
   position: absolute;

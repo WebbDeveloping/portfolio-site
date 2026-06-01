@@ -66,7 +66,13 @@ export default function HomePage({ devProjects, featuredPosts }: HomePageProps) 
                   </Reveal>
                 </div>
               </div>
-              <Reveal immediate delay={0.15} className="slash-svg">
+              <Reveal
+                immediate
+                delay={0.15}
+                className="slash-svg"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 0.45, scale: 1 }}
+              >
                 <img
                   src="/images/joe-webb-logo-grey.png"
                   alt=""
