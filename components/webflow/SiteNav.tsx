@@ -1,5 +1,4 @@
 import { WebflowLink } from "@/components/webflow/WebflowLink";
-import { postPath } from "@/lib/cms/paths";
 import { navLinkProps, type SitePageId } from "@/lib/navigation";
 
 type SiteNavProps = {
@@ -62,12 +61,6 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
                     Projects
                   </WebflowLink>
                   <WebflowLink
-                    href={postPath("professional-gohighlevel-websites")}
-                    className="navigation-link hide w-nav-link"
-                  >
-                    GHL Websites
-                  </WebflowLink>
-                  <WebflowLink
                     href="contact.html"
                     {...navLinkProps("navigation-link w-nav-link", isContact)}
                   >
@@ -127,12 +120,6 @@ export default function SiteNav({ currentPage }: SiteNavProps) {
                 {...navLinkProps("mobile-nav-link w-nav-link", isProjects)}
               >
                 Projects
-              </WebflowLink>
-              <WebflowLink
-                href={postPath("professional-gohighlevel-websites")}
-                className="mobile-nav-link w-nav-link"
-              >
-                GHL Websites
               </WebflowLink>
               <WebflowLink
                 href="contact.html"
